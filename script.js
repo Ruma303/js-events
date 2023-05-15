@@ -25,15 +25,12 @@ document.addEventListener('click', function() {
 });
 */
 
-//* Sintassi eventi inline HTML
-
 
 //% Oggetto Event
 /*
 document.addEventListener('click', (event) => {
     console.log(event);
 });
-
 
 document.addEventListener('click', (event) => {
     console.log(event.target);
@@ -111,6 +108,19 @@ container.addEventListener('click', (item) => {
     }
 });
  */
+
+
+
+//$ removeEventListener()
+
+function handleClick() {
+  console.log('Pulsante cliccato!');
+}
+button.addEventListener('click', handleClick);
+
+// Rimuove l'ascoltatore di eventi click
+button.removeEventListener('click', handleClick);
+
 
 
 
