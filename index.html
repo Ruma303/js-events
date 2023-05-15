@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Coding Events</title>
+    <style>
+        #container {
+            padding-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            gap: 1rem;
+
+        }
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+            padding: 2rem;
+            width: fit-content;
+            border: 2px solid black;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="inline-div">
+        <button onclick="alert('Cliccato!')">Clicca qui</button>
+        <p onmouseover="this.style.color='red'">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolore soluta, impedit quos quasi mollitia fugiat iusto neque, libero commodi possimus sapiente asperiores amet quas, temporibus laudantium? Aspernatur, aliquid ut.</p>
+        <button onfocus="saluta()">Salutami</button>
+    </div>
+
+    <label for="input-text">Input testuale</label>
+    <input type="text" id="input-text">
+
+    <button id="btn">Clicca</button>
+
+    <div id="container">
+        <section id="section1">1</section>
+        <section id="section2">2</section>
+        <section id="section3">3</section>
+    </div>
+
+    <a href="https://www.google.com/">Vai su Google</a>
+
+    <script>
+        function saluta() {
+            alert("Ciao dall'evento onfocus");
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
