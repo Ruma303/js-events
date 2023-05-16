@@ -112,7 +112,7 @@ container.addEventListener('click', (item) => {
 
 
 //$ removeEventListener()
-
+/*
 function handleClick() {
   console.log('Pulsante cliccato!');
 }
@@ -120,13 +120,21 @@ button.addEventListener('click', handleClick);
 
 // Rimuove l'ascoltatore di eventi click
 button.removeEventListener('click', handleClick);
-
+*/
 
 
 
 
 //% Eventi più utilizzati in JavaScript
 
+//$ click e toggle()
+/*
+function toggleButton() {
+    this.classList.toggle('active');
+}
+
+button.addEventListener('click', toggleButton);
+ */
 
 //$ keypress
 /*
@@ -145,9 +153,29 @@ inputText.addEventListener("keydown", function() {
 */
 
 //$ keyup
-
+/*
+inputText.addEventListener("keyup", function() {
+    console.log(inputText.value);
+});
+ */
 
 //$ load
-
+/*
+window.addEventListener('load', function() {
+    const loaded = document.createElement('h2');
+    loaded.innerHTML = 'Pagina caricata completamente';
+    loaded.style.color = "red";
+    document.body.prepend(loaded);
+});
+*/
 
 //$ scroll
+/*
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        document.body.style.backgroundColor = "bisque";
+    } else {
+        document.body.style.backgroundColor = "white";
+    }
+});
+*/
