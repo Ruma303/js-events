@@ -1,5 +1,4 @@
 //% Eventi
-
 // Selettori
 const button = document.querySelector('#btn');
 const inputText = document.getElementById("input-text");
@@ -8,10 +7,9 @@ const section1 = document.getElementById("section1");
 const section2 = document.getElementById("section2");
 const section3 = document.getElementById("section3");
 const link = document.querySelector("a");
-const blocks = document.querySelectorAll("div > section")
+const blocks = document.querySelectorAll("div > section");
 
 //$ addEventListener()
-
 /*
 button.addEventListener('click', function() {
   // codice da eseguire quando il pulsante viene cliccato
@@ -20,11 +18,10 @@ button.addEventListener('click', function() {
 */
 
 /*
-document.addEventListener('click', function() {
+window.addEventListener('click', function() {
     console.log("Hai cliccato nel DOM");
 });
 */
-
 
 //% Oggetto Event
 /*
@@ -35,7 +32,7 @@ document.addEventListener('click', (event) => {
 document.addEventListener('click', (event) => {
     console.log(event.target);
 });
- */
+*/
 
 //% Bubbling e Capturing
 
@@ -48,10 +45,14 @@ container.addEventListener('click', function() {
 section1.addEventListener('click', function() {
     console.log("Hai cliccato sulla section");
 });
- */
+*/
 
 //$ Capturing
 /*
+document.body.addEventListener('click', function() {
+    console.log("Hai cliccato sul body");
+}, true);
+
 container.addEventListener('click', function() {
     console.log("Hai cliccato sul div");
 }, true);
@@ -62,18 +63,21 @@ section1.addEventListener('click', function() {
 */
 
 //$ stopPropagation
-
 /*
 section1.addEventListener('click', (event) => {
-    event.stopPropagation();
+    //event.stopPropagation();
     console.log("Hai cliccato sulla section");
 });
 
 container.addEventListener('click', () => {
+    //event.stopPropagation();
     console.log("Hai cliccato sul div");
-});
-*/
+}, true);
 
+document.body.addEventListener('click', function() {
+    console.log("Hai cliccato sul body");
+}, true);
+*/
 
 //$ preventDefault
 /*
@@ -84,7 +88,6 @@ link.addEventListener('click', (event) => {
 */
 
 //$ Event Delegation
-
 /*
 blocks.addEventListener('click', (e) =>{
     console.log(blocks);
@@ -92,24 +95,26 @@ blocks.addEventListener('click', (e) =>{
 */
 
 /*
-blocks.forEach(link => {
-    link.addEventListener('click', color);
-})
+blocks.forEach(select => {
+    select.addEventListener('click', color);
+});
 
 function color(e) {
     e.target.style.backgroundColor = "red";
-}
+};
 */
+
 /*
 container.addEventListener('click', (item) => {
     console.log(item.target.tagName) //SECTION
+
     if(item.target.tagName === "SECTION") {
         item.target.style.backgroundColor = "red";
+    } else {
+        button.style.backgroundColor = "blue";
     }
 });
- */
-
-
+*/
 
 //$ removeEventListener()
 /*
@@ -122,11 +127,7 @@ button.addEventListener('click', handleClick);
 button.removeEventListener('click', handleClick);
 */
 
-
-
-
 //% Eventi più utilizzati in JavaScript
-
 //$ click e toggle()
 /*
 function toggleButton() {
@@ -134,14 +135,16 @@ function toggleButton() {
 }
 
 button.addEventListener('click', toggleButton);
- */
+*/
 
 //$ keypress
 /*
 //* Proprietà which
 inputText.addEventListener("keypress", (e) => {
+    console.log(e.target.value);
     console.log(e.which);
-}); */
+});
+*/
 
 
 //$ keydown
@@ -157,7 +160,7 @@ inputText.addEventListener("keydown", function() {
 inputText.addEventListener("keyup", function() {
     console.log(inputText.value);
 });
- */
+*/
 
 //$ load
 /*
@@ -166,6 +169,7 @@ window.addEventListener('load', function() {
     loaded.innerHTML = 'Pagina caricata completamente';
     loaded.style.color = "red";
     document.body.prepend(loaded);
+    console.log("Pagina caricata");
 });
 */
 
