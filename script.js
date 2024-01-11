@@ -1,5 +1,7 @@
 //% Eventi
-// Selettori
+
+
+//* Selettori
 const button = document.querySelector('#btn');
 const inputText = document.getElementById("input-text");
 const container = document.getElementById("container");
@@ -9,19 +11,25 @@ const section3 = document.getElementById("section3");
 const link = document.querySelector("a");
 const blocks = document.querySelectorAll("div > section");
 
-//$ addEventListener()
-/*
-button.addEventListener('click', function() {
-  // codice da eseguire quando il pulsante viene cliccato
-  alert("Mi hai cliccato!");
-});
-*/
+
+//, addEventListener()
+
+/* button.addEventListener('click', function() {
+    // codice da eseguire quando il pulsante viene cliccato
+    alert("Mi hai cliccato!");
+}); */
 
 /*
 window.addEventListener('click', function() {
-    console.log("Hai cliccato nel DOM");
+    console.log("Hai cliccato l'oggetto window!");
 });
-*/
+
+document.addEventListener('click', function() {
+    console.log("Hai cliccato l'oggetto document!");
+}); */
+
+
+
 
 //% Oggetto Event
 /*
@@ -36,7 +44,7 @@ document.addEventListener('click', (event) => {
 
 //% Bubbling e Capturing
 
-//$ Bubbling
+//, Bubbling
 /*
 container.addEventListener('click', function() {
     console.log("Hai cliccato sul div");
@@ -47,7 +55,7 @@ section1.addEventListener('click', function() {
 });
 */
 
-//$ Capturing
+//, Capturing
 /*
 document.body.addEventListener('click', function() {
     console.log("Hai cliccato sul body");
@@ -62,7 +70,7 @@ section1.addEventListener('click', function() {
 });
 */
 
-//$ stopPropagation
+//, stopPropagation
 /*
 section1.addEventListener('click', (event) => {
     //event.stopPropagation();
@@ -79,7 +87,7 @@ document.body.addEventListener('click', function() {
 }, true);
 */
 
-//$ preventDefault
+//, preventDefault
 /*
 link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -87,7 +95,7 @@ link.addEventListener('click', (event) => {
 });
 */
 
-//$ Event Delegation
+//, Event Delegation
 /*
 blocks.addEventListener('click', (e) =>{
     console.log(blocks);
@@ -116,7 +124,7 @@ container.addEventListener('click', (item) => {
 });
 */
 
-//$ removeEventListener()
+//, removeEventListener()
 /*
 function handleClick() {
   console.log('Pulsante cliccato!');
@@ -128,7 +136,7 @@ button.removeEventListener('click', handleClick);
 */
 
 //% Eventi più utilizzati in JavaScript
-//$ click e toggle()
+//, click e toggle()
 /*
 function toggleButton() {
     this.classList.toggle('active');
@@ -137,7 +145,7 @@ function toggleButton() {
 button.addEventListener('click', toggleButton);
 */
 
-//$ keypress
+//, keypress
 /*
 //* Proprietà which
 inputText.addEventListener("keypress", (e) => {
@@ -147,7 +155,7 @@ inputText.addEventListener("keypress", (e) => {
 */
 
 
-//$ keydown
+//, keydown
 /*
 //* Proprietà value
 inputText.addEventListener("keydown", function() {
@@ -155,14 +163,14 @@ inputText.addEventListener("keydown", function() {
 });
 */
 
-//$ keyup
+//, keyup
 /*
 inputText.addEventListener("keyup", function() {
     console.log(inputText.value);
 });
 */
 
-//$ load
+//, load
 /*
 window.addEventListener('load', function() {
     const loaded = document.createElement('h2');
@@ -173,7 +181,7 @@ window.addEventListener('load', function() {
 });
 */
 
-//$ scroll
+//, scroll
 /*
 window.addEventListener('scroll', function() {
     if (window.scrollY > 300) {

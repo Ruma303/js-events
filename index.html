@@ -31,19 +31,21 @@
         .active{
             background-color: #ffd700;
         }
-    </style>
+        </style>
 </head>
 <body>
     <div id="inline-div">
-        <button onclick="alert('Cliccato!')">Sintassi inline</button>
+        <button id="btn">Cliccami!</button>
+        <button onclick="alert('Cliccato!')">Evento inline</button>
+
         <p id="paragraph" onmouseover="this.style.color='red'">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolore soluta, impedit quos quasi mollitia fugiat iusto neque, libero commodi possimus sapiente asperiores amet quas, temporibus laudantium? Aspernatur, aliquid ut.</p>
+
         <button onfocus="saluta()">Salutami</button>
     </div>
 
     <label for="input-text">Input testuale</label>
     <input type="text" id="input-text">
     <br>
-    <button id="btn">Clicca</button>
 
     <div id="container">
         <section id="section1">1</section>
