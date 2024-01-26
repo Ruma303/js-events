@@ -17,12 +17,12 @@ const blocks = document.querySelectorAll("section > div");
     alert("Mi hai cliccato!");
 }); */
 
-/*
-window.addEventListener('click', function() {
-    console.log("Hai cliccato l'oggetto window!");
-});
 
-document.addEventListener('click', function() {
+/* window.addEventListener('click', function() {
+    console.log("Hai cliccato l'oggetto window!");
+}); */
+
+/* document.addEventListener('click', function() {
     console.log("Hai cliccato l'oggetto document!");
 }); */
 
@@ -31,9 +31,7 @@ document.addEventListener('click', function() {
 
 //% Oggetto Event
 
-/* document.addEventListener('click', (event) => {
-    console.log(event);
-});
+/* document.addEventListener('click', event => console.log(event))
 
 document.addEventListener('click', (event) => {
     console.log(event.target);
@@ -73,7 +71,7 @@ inner.addEventListener('click', function() {
 
 //, stopPropagation
 
-/*  inner.addEventListener('click', () => {
+/* inner.addEventListener('click', () => {
     console.log("Hai cliccato nel div interno");
 });
 
@@ -87,7 +85,7 @@ document.body.addEventListener('click', () => {
 }); */
 
 
-//, preventDefault
+//, preventDefault()
 
 /* link.addEventListener('click', (event) => {
     event.preventDefault();
@@ -99,11 +97,11 @@ document.body.addEventListener('click', () => {
 
 /* blocks.addEventListener('click', () => {
     console.log(blocks);
-});  //. Errore */
+}); */  //. Errore
 
 
-/* blocks.forEach( select => {
-    select.addEventListener('click', (e) => {
+/* blocks.forEach(div => {
+    div.addEventListener('click', (e) => {
         e.target.style.backgroundColor = "red";
     });
 }); */
@@ -111,17 +109,18 @@ document.body.addEventListener('click', () => {
 
 /* outer.addEventListener('click', (item) => {
     console.log(item.target.tagName) // DIV
+
     if(item.target.tagName === "DIV") {
         item.target.style.backgroundColor = "red";
     } else {
-        button.style.backgroundColor = "blue";
+        document.body.style.backgroundColor = "aqua";
     }
 }); */
 
 
 //, removeEventListener()
 
-/*  button.addEventListener('click', handleClick);
+/* button.addEventListener('click', handleClick);
 
 function handleClick() {
     console.log('Pulsante cliccato!');
@@ -159,13 +158,12 @@ button.addEventListener('click', toggleButton); */
 
 
 //, keyup
-
 /* inputText.addEventListener("keyup", function() {
     console.log(inputText.value);
 }); */
 
 
-//, load
+//, load e DOMContentLoaded
 
 // window.addEventListener('load', function() {
 /* window.addEventListener('DOMContentLoaded', function() {
@@ -180,7 +178,6 @@ button.addEventListener('click', toggleButton); */
 
 
 //, scroll
-
 /* window.addEventListener('scroll', function() {
     if (window.scrollY > 300) {
         document.body.style.backgroundColor = "aqua";
